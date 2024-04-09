@@ -15,6 +15,24 @@ function clearCards() {
 
 function runProgram() {
     console.log("Program is running");
+    let apple = fruitObjects[0];
+    let newFruitCard = document.createElement('div');
+    //heading
+    let fruitHeading = document.createElement('h3');
+    fruitHeading.textContent = apple.name;
+    newFruitCard.appendChild(fruitHeading);
+    //color 
+    let fruitColor = document.createElement('p');
+    fruitColor.textContent = `Color: ${apple.color}`;
+    fruitColor.style.color = apple.color;
+    console.log(fruitColor)
+    newFruitCard.appendChild(fruitColor);
+    console.log(newFruitCard.childNodes)
+
+
+    let fruitContainer = document.querySelector('#cards');
+    newFruitCard.classList.add('fruitCard');
+    fruitContainer.appendChild(newFruitCard);
 
 }
 
